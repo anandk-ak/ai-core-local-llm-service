@@ -1,0 +1,5 @@
+mkdir -p app/routes app/services app/models app/core
+touch app/main.py
+touch app/routes/generate.py
+touch app/services/llm_service.py
+touch requirements.txt
