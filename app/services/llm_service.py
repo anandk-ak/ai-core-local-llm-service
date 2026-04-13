@@ -1,12 +1,27 @@
 import requests
 import time
+from app.services.rag_service import retrieve_context
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-def generate_text(prompt, model="mistral"):
+def generate_text(prompt, model="mistral", collection=None):
     start_time = time.time()
 
-    print(f"[LLM REQUEST] model={model} | prompt_length={len(prompt)}")
+    print(f"[LLM REQUEST] model={model} | collection={collection} | prompt_length={len(prompt)}")
+
+    # RAG logic: First RAG is called and then the LLM
+    if collection:
+        context = retrieve_context(collection, prompt)
+        print(f"[RAG] Retrieved context: {context}")
+
+        if context:
+            prompt = f"""
+Context:
+{context}
+
+User Query:
+{prompt}
+"""
 
     try:
         response = requests.post(
