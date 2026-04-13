@@ -1,30 +1,39 @@
 import requests
+import time
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
 def generate_text(prompt, model="mistral"):
-    response = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": model,
-            "prompt": prompt,
-            "stream": False
-        }
-    )
+    start_time = time.time()
 
-    print("\n===== DEBUG =====")
-    print("STATUS:", response.status_code)
-    print("TEXT:", response.text)
-    print("==============\n")
+    print(f"[LLM REQUEST] model={model} | prompt_length={len(prompt)}")
 
     try:
-        data = response.json()
-    except Exception:
-        return f"Invalid JSON response: {response.text}"
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": model,
+                "prompt": prompt,
+                "stream": False
+            }
+        )
 
-    if "response" in data:
-        return data["response"]
-    elif "error" in data:
-        return f"Ollama error: {data['error']}"
-    else:
-        return f"Unexpected response format: {data}"
+        duration = round(time.time() - start_time, 2)
+        print(f"[LLM RESPONSE] status={response.status_code} | time={duration}s")
+
+        data = response.json()
+
+        if "response" in data:
+            return data["response"]
+
+        elif "error" in data:
+            print(f"[LLM ERROR] {data['error']}")
+            return f"Ollama error: {data['error']}"
+
+        else:
+            print(f"[LLM UNKNOWN FORMAT] {data}")
+            return f"Unexpected response format: {data}"
+
+    except Exception as e:
+        print(f"[LLM EXCEPTION] {str(e)}")
+        return f"LLM connection error: {str(e)}"
