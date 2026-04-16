@@ -1,4 +1,5 @@
 import requests
+import threading
 
 # URL where your FastAPI AI Core is running
 AI_CORE_URL = "http://127.0.0.1:8000/generate"
@@ -27,3 +28,28 @@ def get_ai_insight(prompt):
 
     # Extract response from API JSON output
     return response.json()["response"]
+
+
+# Wrapper function which calls get_ai_insight()
+def get_ai_insight_async(prompt):
+    """
+    Run LLM call in a background thread (non-blocking).
+    """
+
+    def task():
+        print("[ASYNC] Starting AI analysis...")
+
+        try:
+            insight = get_ai_insight(prompt)
+
+            print("\n=== ASYNC AI INSIGHT ===")
+            print(insight)
+
+        except Exception as e:
+            print(f"[ASYNC ERROR] {e}")
+
+    # Start background thread
+    thread = threading.Thread(target=task)
+
+    # Non-daemon → ensures it completes unless process is killed
+    thread.start()
