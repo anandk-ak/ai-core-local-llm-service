@@ -1,5 +1,6 @@
 import time
 import psutil
+import os
 
 def get_top_processes(limit=3):
     """
@@ -21,11 +22,15 @@ def get_top_processes(limit=3):
             continue
 
     # Step 2: Wait a short time to measure CPU usage
-    time.sleep(1)
+    time.sleep(0.3)
 
     # Step 3: Collect actual CPU usage
     for proc in psutil.process_iter(['pid', 'name', 'cpu_percent']):
         try:
+            current_pid = os.getpid()
+            if proc.pid == current_pid:
+                continue  # 👈 skip your own process, that is, monitor is excluded from this list
+
             process_info = proc.info
 
             cpu_usage = process_info['cpu_percent'] or 0.0

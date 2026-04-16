@@ -5,6 +5,8 @@ from datetime import datetime
 # File where metrics will be stored
 METRICS_FILE = "laptop_monitor/storage/metrics.json"
 
+# Max number of records to keep (rolling window)
+MAX_RECORDS = 1000
 
 def save_metrics(metrics):
     """
@@ -33,6 +35,10 @@ def save_metrics(metrics):
 
     # Append new record
     existing_data.append(data)
+
+    # Keep only last MAX_RECORDS entries
+    if len(existing_data) > MAX_RECORDS:
+        existing_data = existing_data[-MAX_RECORDS:]
 
     # Write back to file
     with open(METRICS_FILE, "w") as f:

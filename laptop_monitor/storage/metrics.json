@@ -1,101 +1,441 @@
 [
   {
-    "timestamp": "2026-04-14 18:38:45",
-    "cpu": 13.5,
-    "memory": 77.7,
-    "disk": 23.1,
-    "top_processes": [
-      {
-        "name": "plugin-container",
-        "cpu": 43.1
-      },
-      {
-        "name": "com.apple.WebKit.WebContent",
-        "cpu": 25.8
-      },
-      {
-        "name": "Activity Monitor",
-        "cpu": 4.9
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-04-14 18:43:34",
-    "cpu": 29.1,
-    "memory": 95.5,
-    "disk": 24.1,
-    "top_processes": [
-      {
-        "name": "com.apple.WebKit.WebContent",
-        "cpu": 23.3
-      },
-      {
-        "name": "plugin-container",
-        "cpu": 15.0
-      },
-      {
-        "name": "Activity Monitor",
-        "cpu": 5.5
-      }
-    ]
-  },
-  {
-    "timestamp": "2026-04-16 10:33:04",
-    "cpu": 27.8,
-    "memory": 78.7,
-    "disk": 23.5,
+    "timestamp": "2026-04-16 16:40:39",
+    "cpu": 15.9,
+    "memory": 74.5,
+    "disk": 23.6,
     "top_processes": [
       {
         "name": "com.apple.WebKit.WebContent",
         "cpu": 25.6
       },
       {
-        "name": "Python",
-        "cpu": 4.5
+        "name": "ChatGPT",
+        "cpu": 9.6
       },
       {
-        "name": "Comet Helper (Renderer)",
-        "cpu": 4.1
+        "name": "WeatherWidget",
+        "cpu": 6.2
       }
     ]
   },
   {
-    "timestamp": "2026-04-16 10:33:33",
-    "cpu": 12.7,
-    "memory": 77.5,
-    "disk": 23.5,
+    "timestamp": "2026-04-16 16:40:51",
+    "cpu": 11.9,
+    "memory": 74.5,
+    "disk": 23.6,
     "top_processes": [
       {
         "name": "com.apple.WebKit.WebContent",
-        "cpu": 23.7
+        "cpu": 25.7
       },
       {
-        "name": "Activity Monitor",
-        "cpu": 6.4
+        "name": "ChatGPT",
+        "cpu": 5.2
       },
       {
-        "name": "Safari",
-        "cpu": 3.3
+        "name": "Python",
+        "cpu": 4.8
       }
     ]
   },
   {
-    "timestamp": "2026-04-16 10:34:49",
-    "cpu": 11.9,
-    "memory": 78.5,
-    "disk": 23.5,
+    "timestamp": "2026-04-16 16:41:03",
+    "cpu": 13.8,
+    "memory": 74.5,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.8
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 16.9
+      },
+      {
+        "name": "Python",
+        "cpu": 3.9
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 16:41:16",
+    "cpu": 12.6,
+    "memory": 74.5,
+    "disk": 23.6,
     "top_processes": [
       {
         "name": "com.apple.WebKit.WebContent",
         "cpu": 26.1
       },
       {
+        "name": "ChatGPT",
+        "cpu": 11.2
+      },
+      {
+        "name": "Activity Monitor",
+        "cpu": 6.2
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 16:41:28",
+    "cpu": 23.7,
+    "memory": 74.4,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "ChatGPT",
+        "cpu": 99.1
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.7
+      },
+      {
+        "name": "ControlCenter",
+        "cpu": 4.5
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:14:19",
+    "cpu": 18.8,
+    "memory": 76.8,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.3
+      },
+      {
         "name": "Comet Helper (Renderer)",
-        "cpu": 4.2
+        "cpu": 4.0
+      },
+      {
+        "name": "Python",
+        "cpu": 3.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:14:35",
+    "cpu": 12.0,
+    "memory": 76.3,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 24.6
+      },
+      {
+        "name": "Comet Helper (Renderer)",
+        "cpu": 3.8
       },
       {
         "name": "Python",
         "cpu": 3.4
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:14:51",
+    "cpu": 14.6,
+    "memory": 79.0,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 24.9
+      },
+      {
+        "name": "Activity Monitor",
+        "cpu": 13.1
+      },
+      {
+        "name": "Python",
+        "cpu": 4.9
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:15:08",
+    "cpu": 13.8,
+    "memory": 77.8,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.7
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 7.2
+      },
+      {
+        "name": "Python",
+        "cpu": 6.6
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:15:24",
+    "cpu": 26.7,
+    "memory": 77.4,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "ChatGPT",
+        "cpu": 100.5
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.4
+      },
+      {
+        "name": "Python",
+        "cpu": 6.1
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:15:40",
+    "cpu": 20.8,
+    "memory": 77.4,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "ChatGPT",
+        "cpu": 44.5
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 24.3
+      },
+      {
+        "name": "Python",
+        "cpu": 6.3
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:15:57",
+    "cpu": 16.1,
+    "memory": 77.5,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 24.3
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 22.9
+      },
+      {
+        "name": "Python",
+        "cpu": 5.9
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:16:13",
+    "cpu": 19.9,
+    "memory": 76.9,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "AppleSpell",
+        "cpu": 45.0
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 24.9
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 16.2
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:16:30",
+    "cpu": 17.8,
+    "memory": 77.1,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.8
+      },
+      {
+        "name": "cloudd",
+        "cpu": 15.2
+      },
+      {
+        "name": "nsurlsessiond",
+        "cpu": 9.9
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:16:46",
+    "cpu": 16.7,
+    "memory": 77.7,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "WhatsApp",
+        "cpu": 74.2
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.5
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 22.3
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:17:02",
+    "cpu": 13.5,
+    "memory": 78.2,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.5
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 12.5
+      },
+      {
+        "name": "Python",
+        "cpu": 3.6
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:17:19",
+    "cpu": 27.4,
+    "memory": 78.7,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "ChatGPT",
+        "cpu": 100.7
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.2
+      },
+      {
+        "name": "Terminal",
+        "cpu": 6.4
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:17:35",
+    "cpu": 12.2,
+    "memory": 78.2,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 27.2
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 4.6
+      },
+      {
+        "name": "Python",
+        "cpu": 4.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:17:51",
+    "cpu": 10.7,
+    "memory": 77.8,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.6
+      },
+      {
+        "name": "ChatGPT",
+        "cpu": 4.9
+      },
+      {
+        "name": "Python",
+        "cpu": 3.7
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:18:08",
+    "cpu": 22.3,
+    "memory": 78.9,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "ChatGPT",
+        "cpu": 91.4
+      },
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.4
+      },
+      {
+        "name": "talagentd",
+        "cpu": 12.5
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:18:24",
+    "cpu": 12.9,
+    "memory": 78.6,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.4
+      },
+      {
+        "name": "Python",
+        "cpu": 3.5
+      },
+      {
+        "name": "Safari",
+        "cpu": 2.9
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 17:18:41",
+    "cpu": 10.7,
+    "memory": 78.0,
+    "disk": 23.6,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 27.1
+      },
+      {
+        "name": "Python",
+        "cpu": 3.6
+      },
+      {
+        "name": "Comet Helper (Renderer)",
+        "cpu": 3.1
       }
     ]
   }
