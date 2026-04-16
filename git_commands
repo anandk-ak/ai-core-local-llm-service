@@ -1,0 +1,11 @@
+# 1. Check changes
+git status
+
+# 2. Add all files
+git add .
+
+# 3. Commit
+git commit -m "Add RAG with ChromaDB and collection-based retrieval"
+
+# 4. Push
+git push origin main

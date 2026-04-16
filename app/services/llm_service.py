@@ -22,6 +22,8 @@ Context:
 User Query:
 {prompt}
 """
+        print("\n=== [DEBUG] FINAL PROMPT ===")
+        print(prompt)
 
     try:
         response = requests.post(
