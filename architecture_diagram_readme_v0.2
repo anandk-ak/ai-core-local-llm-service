@@ -1,0 +1,106 @@
+[ Laptop Monitor App ]
+        │
+        ▼
+┌────────────────────────────┐
+│  Collector Layer           │
+│  (metrics_collector.py)    │
+│  - get_metrics()           │
+│  - get_top_processes()     │
+└────────────────────────────┘
+        │
+        ▼
+┌────────────────────────────┐
+│  Storage Layer             │
+│  (metrics_store.py)        │
+│  - save_metrics()          │
+│  (JSON-based history)      │
+└────────────────────────────┘
+        │
+        ▼
+┌────────────────────────────┐
+│  Prompt Layer              │
+│  (prompt_builder.py)       │
+│  - build_prompt()          │
+└────────────────────────────┘
+        │
+        ▼
+┌────────────────────────────┐
+│  AI Client Layer           │
+│  (ai_client.py)            │
+│  - get_ai_insight()        │
+└────────────────────────────┘
+        │
+        ▼
+════════════════════════════════
+        AI CORE (Reusable)
+════════════════════════════════
+        │
+        ▼
+┌────────────────────────────┐
+│  RAG Layer                 │
+│  (rag_service.py)          │
+│  - retrieve_context()      │
+│  (ChromaDB)               │
+└────────────────────────────┘
+        │
+        ▼
+┌────────────────────────────┐
+│  LLM Layer                 │
+│  (llm_service.py)          │
+│  - generate_text()         │
+│  (Ollama – Mistral)        │
+└────────────────────────────┘
+
+
+END-TO-END FLOW:
+===============
+
+
+1. Collect metrics (CPU, Memory, Disk, Processes)
+2. Store metrics → JSON (history layer)
+3. Build structured prompt
+4. Send to AI Core (/generate)
+5. Retrieve RAG context (vector DB)
+6. Combine → Final prompt
+7. LLM generates insight
+8. Output returned to user
+
+
+Key Capabilities (Current)
+	•	✅ Real-time system monitoring
+	•	✅ Process-level diagnostics
+	•	✅ RAG-enabled contextual responses
+	•	✅ Persistent knowledge base (ChromaDB)
+	•	✅ Historical data capture (JSON)
+
+⸻
+
+⚠️ Current Limitations
+	•	❌ LLM called every cycle (slow ~40s)
+	•	❌ No rule-based triggering yet
+	•	❌ No async/non-blocking execution
+	•	❌ No pattern detection / prediction
+
+
+
+NEXT ARCHITECTURAL EVOLUTION:
+============================
+
+
+Add:
+→ Rule Engine (trigger-based AI)
+→ Async LLM execution
+→ Pattern detection (history-driven)
+→ Prediction layer
+
+
+KEY FILES:
+==========
+
+collector/metrics_collector.py  → Data ingestion
+storage/metrics_store.py        → History
+prompts/prompt_builder.py       → Prompt logic
+client/ai_client.py             → API call
+runner/run_monitor.py           → Orchestration
+
+app/services/                   → AI Core (LLM + RAG)

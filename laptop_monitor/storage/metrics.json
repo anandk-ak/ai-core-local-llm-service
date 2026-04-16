@@ -38,5 +38,65 @@
         "cpu": 5.5
       }
     ]
+  },
+  {
+    "timestamp": "2026-04-16 10:33:04",
+    "cpu": 27.8,
+    "memory": 78.7,
+    "disk": 23.5,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 25.6
+      },
+      {
+        "name": "Python",
+        "cpu": 4.5
+      },
+      {
+        "name": "Comet Helper (Renderer)",
+        "cpu": 4.1
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 10:33:33",
+    "cpu": 12.7,
+    "memory": 77.5,
+    "disk": 23.5,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 23.7
+      },
+      {
+        "name": "Activity Monitor",
+        "cpu": 6.4
+      },
+      {
+        "name": "Safari",
+        "cpu": 3.3
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-16 10:34:49",
+    "cpu": 11.9,
+    "memory": 78.5,
+    "disk": 23.5,
+    "top_processes": [
+      {
+        "name": "com.apple.WebKit.WebContent",
+        "cpu": 26.1
+      },
+      {
+        "name": "Comet Helper (Renderer)",
+        "cpu": 4.2
+      },
+      {
+        "name": "Python",
+        "cpu": 3.4
+      }
+    ]
   }
 ]

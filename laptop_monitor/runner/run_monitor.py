@@ -3,6 +3,7 @@ from laptop_monitor.collector.metrics_collector import get_metrics
 from laptop_monitor.prompts.prompt_builder import build_prompt
 from laptop_monitor.client.ai_client import get_ai_insight
 from laptop_monitor.storage.metrics_store import save_metrics
+from laptop_monitor.rules.rules_engine import check_trigger
 
 
 def run():
@@ -20,22 +21,33 @@ def run():
     # and Save metrics to history
     save_metrics(metrics)
 
-    # Step 2: Convert metrics into a structured prompt
-    prompt = build_prompt(metrics)
+    # Step 2: Check if we should trigger AI
+    trigger = check_trigger(metrics)
 
-    # 👉 NEW: Print the prompt for debugging
-    print("\n=== [DEBUG] PROMPT SENT TO AI ===")
-    print(prompt)
+    if trigger:
+        print("[ACTION] Triggering AI analysis...")
 
-    # Step 3: Send prompt to AI Core and get insight
-    insight = get_ai_insight(prompt)
+        # Step 4: Convert metrics into a structured prompt
+        prompt = build_prompt(metrics)
+        
+        # 👉 NEW: Print the prompt for debugging
+        print("\n=== [DEBUG] PROMPT SENT TO AI ===")
+        print(prompt)
 
-    # Step 4: Display results clearly
-    print("\n=== METRICS ===")
-    print(metrics)
+        # Step 5: Display the metrics
+        print("\n=== METRICS ===")
+        print(metrics)
 
-    print("\n=== AI INSIGHT ===")
-    print(insight)
+        # Step 6: Send prompt to AI Core and get insight
+        insight = get_ai_insight(prompt)
+        print("\n=== AI INSIGHT ===")
+        print(insight)
+    else:
+        # Step 5: Display the metrics
+        print("\n=== METRICS ===")
+        print(metrics)
+        
+        print("[DEBUG] [ACTION] No trigger. Skipping AI call.")
 
 
 # Standard Python entry point
